@@ -4,7 +4,10 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class MarsRoverApiService {
+  constructor(private http: Http){}//private means its only accessable in this instance
 
-  constructor() { }
+  getByDateAndCamera(date: string, camera: string) {
+  return this.http.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&camera=${camera}&&api_key=DEMO_KEY`)
+}
 
 }
