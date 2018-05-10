@@ -1,6 +1,8 @@
-<div class="container">
-  <h1>Curiosity Images</h1>
-
+<div class="container-fluid">
+  <div class="card">
+    <h1>Curiosity Images</h1>
+  </div>
+  <br>
   <form>
     <div class="form-group">
       <label for="camera">Date</label>
@@ -22,4 +24,7 @@
     <app-photo-list [childPhotos]="photos"></app-photo-list>
   </div>
   <!--  property binding between childPhotos & parent component property that we will store our array of photos returned from the api call.  -->
+  <div *ngIf="photos===null">
+    <h3>There were no photos taken on {{roverDate.value}} by the {{roverCamera.value}} camera.</h3>
+  </div>
 </div>
