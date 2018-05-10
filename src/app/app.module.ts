@@ -6,12 +6,14 @@ import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { RoverFormComponent } from './rover-form/rover-form.component';
+import { PhotoListComponent } from './photo-list/photo-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RoverFormComponent
+    RoverFormComponent,
+    PhotoListComponent
   ],
   imports: [
     BrowserModule,
